@@ -1,0 +1,48 @@
+1. Aturan Logika (Rule-Based)
+Aturan berbasis IF - THEN:
+- IF daun menguning AND tidak ada bercak hitam AND tidak ada daun berlubang AND tidak ada tanaman layu  
+  THEN kemungkinan terkena Hama Kutu Daun.
+- IF terdapat bercak hitam AND tidak ada daun menguning AND tidak ada daun berlubang AND tidak ada tanaman layu  
+  THEN kemungkinan terkena Jamur Patogen.
+- IF daun berlubang AND tidak ada daun menguning AND tidak ada bercak hitam AND tidak ada tanaman layu  
+  THEN kemungkinan terkena Ulat Daun.
+- IF tanaman layu AND tidak ada daun menguning AND tidak ada bercak hitam AND tidak ada daun berlubang  
+  THEN kemungkinan terkena Nematoda Tanah.
+- IF tidak ada daun menguning AND tidak ada bercak hitam AND tidak ada daun berlubang AND tidak ada tanaman layu  
+  THEN tanaman sehat.
+
+
+2. Representasi Logika Proposisional
+Definisi proposisi:
+- P1: Daun menguning
+- P2: Bercak hitam
+- P3: Daun berlubang
+- P4: Tanaman layu
+Definisi kesimpulan:
+- H1: Hama Kutu Daun
+- H2: Jamur Patogen
+- H3: Ulat Daun
+- H4: Nematoda Tanah
+- H5: Tanaman Sehat
+
+Aturan logika:
+- (P1 ∧ ¬P2 ∧ ¬P3 ∧ ¬P4) → H1
+- (P2 ∧ ¬P1 ∧ ¬P3 ∧ ¬P4) → H2
+- (P3 ∧ ¬P1 ∧ ¬P2 ∧ ¬P4) → H3
+- (P4 ∧ ¬P1 ∧ ¬P2 ∧ ¬P3) → H4
+- (¬P1 ∧ ¬P2 ∧ ¬P3 ∧ ¬P4) → H5
+
+
+3. Penjelasan Sistem Inferensi
+Input:
+- Data gejala tanaman yang diamati (daun menguning, bercak hitam, daun berlubang, tanaman layu).
+
+Proses Inferensi:
+- Sistem akan melakukan pencocokan berdasarkan aturan kombinasi gejala.
+- Menggunakan metode forward chaining: dari data gejala → menuju diagnosa.
+- Sistem memeriksa satu per satu: apakah gejalanya cocok dengan pola hama/penyakit tertentu.
+
+Output:
+- Memberikan diagnosa jenis hama atau penyakit tanaman, atau menyatakan bahwa tanaman dalam kondisi sehat.
+
+
